@@ -1,10 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
-const util = require("util");
 
-const readFileSync = util.promisify(fs.readFile);
-const writeFileSync = util.promisify(fs.writeFIle);
+// get test
+// /api
 
 router.get("/api", (req, res) => {
   res.json({ msg: "success" });
@@ -25,7 +24,13 @@ router.get("/api/all", async (req, res) => {
   fs.readFile("data.json", "utf8", (err, data) => {
     if (err) throw err;
     res.send(data);
+    data = JSON.parse(data);
   });
+});
+
+// post new pokemon
+router.post("api/new", (req, res) => {
+  res.json(req.body);
 });
 
 module.exports = router;
