@@ -19,17 +19,17 @@ router.get("/api", (req, res) => {
 
 //send the enitre array in res.json
 
-router.get("/api/all", async (req, res) => {
-  res.json({ msg: "success" });
+router.get("/api/all", (req, res) => {
+  // res.json({ msg: "success" });
   fs.readFile("data.json", "utf8", (err, data) => {
     if (err) throw err;
-    res.send(data);
     data = JSON.parse(data);
+    res.send(data);
   });
 });
 
 // post new pokemon
-router.post("api/new", (req, res) => {
+router.post("/api/new", (req, res) => {
   res.json(req.body);
 });
 
