@@ -22,7 +22,7 @@ router.get("/api", (req, res) => {
 
 router.get("/api/all", async (req, res) => {
   res.json({ msg: "success" });
-  let pokemonData = await readFileSync("data.json");
+  let pokemonData = await readFile("data.json");
   pokemonData = JSON.parse(pokemonData);
   res.send(pokemonData);
 });
