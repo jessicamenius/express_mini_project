@@ -22,9 +22,10 @@ router.get("/api", (req, res) => {
 
 router.get("/api/all", async (req, res) => {
   res.json({ msg: "success" });
-  let pokemonData = await readFile("data.json");
-  pokemonData = JSON.parse(pokemonData);
-  res.send(pokemonData);
+  fs.readFile("data.json", "utf8", (err, data) => {
+    if (err) throw err;
+    res.send(data);
+  });
 });
 
 module.exports = router;
