@@ -12,13 +12,6 @@ router.get("/api", (req, res) => {
 
 //api/all
 
-router.get("/api/all", async (req, res) => {
-  res.json({ msg: "success" });
-  let pokemonData = await readFileSync("data.json");
-  pokemonData = JSON.parse(pokemonData);
-  res.send(pokemonData);
-});
-
 //route/get
 
 //use fs read json files
@@ -26,5 +19,12 @@ router.get("/api/all", async (req, res) => {
 //convert
 
 //send the enitre array in res.json
+
+router.get("/api/all", async (req, res) => {
+  res.json({ msg: "success" });
+  let pokemonData = await readFileSync("data.json");
+  pokemonData = JSON.parse(pokemonData);
+  res.send(pokemonData);
+});
 
 module.exports = router;
