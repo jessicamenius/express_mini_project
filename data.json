@@ -4,19 +4,50 @@
       "name": "Bulbasaur",
       "id": 1,
       "type": "Grass",
-      "moves": ["tackle", "growl"]
+      "moves": [
+        "tackle",
+        "growl"
+      ]
     },
     {
       "name": "Charmander",
       "id": 2,
       "type": "Fire",
-      "moves": ["tackle", "growl"]
+      "moves": [
+        "tackle",
+        "growl"
+      ]
     },
     {
       "name": "Squirtle",
       "id": 3,
       "type": "Water",
-      "moves": ["tackle", "growl"]
+      "moves": [
+        "tackle",
+        "growl"
+      ]
+    },
+    {
+      "name": "Magikarp",
+      "id": "129",
+      "type": "Water",
+      "Content-Type": "application/json"
+    },
+    {
+      "name": "Magikarp",
+      "id": "4",
+      "type": "Water"
+    },
+    {
+      "name": "Magikarp",
+      "id": 6,
+      "type": "Water"
+    },
+    {
+      "name": "Magikarp",
+      "id": 7,
+      "type": "Water",
+      "moves": "swim"
     }
   ]
 }
