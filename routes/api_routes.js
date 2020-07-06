@@ -54,6 +54,7 @@ router.post("/api/new", (req, res) => {
   data.pokemon.push({ name, id, type, moves });
 
   fs.writeFileSync("data.json", JSON.stringify(data, null, 2));
+
   res.send({ msg: "success" });
 });
 
